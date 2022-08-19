@@ -1,0 +1,3 @@
+[submodule "packages/tsx-react-app/src/monorepo-react"]
+	path = packages/tsx-react-app/src/monorepo-react
+	url = https://github.com/zssvaidar/monorepo-react.git
