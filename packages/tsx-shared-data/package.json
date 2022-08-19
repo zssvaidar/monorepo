@@ -1,0 +1,29 @@
+{
+  "name": "tsx-shared-data",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Aidar Zharassov <aidarzssv@gmail.com>",
+  "homepage": "https://github.com/zssvaidar/monorepo#readme",
+  "license": "ISC",
+  "main": "lib/tsx-shared-data.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zssvaidar/monorepo.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/tsx-shared-data.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/zssvaidar/monorepo/issues"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}

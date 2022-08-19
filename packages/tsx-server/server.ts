@@ -1,20 +1,28 @@
-import express from 'express';
+import express from "express";
+import _ from "lodash";
 const app = express();
 const port = 3001;
-import cors from 'cors';
 
-const corsConfig  = {
-    origin: 'http://localhost:3000',
-};
+export interface QueryPayload {
+  payload: string;
+}
 
-app.use(cors( corsConfig));
+app.use((_req, res, next) => {
+  // Allow any website to connect
+  res.setHeader("Access-Control-Allow-Origin", "*");
 
-app.get("/data", (req, res) => {
-    res.json({
-        foo: "bar"
-    });
+  // Continue to next middleware
+  next();
+});
+
+app.get("/", (_req, res) => {
+  const responseData: QueryPayload = {
+    payload: _.snakeCase("Server data returned successfully"),
+  };
+
+  res.json(responseData);
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Example app listening at http://localhost:${port}`);
 });
